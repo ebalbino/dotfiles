@@ -98,33 +98,15 @@ bindkey '[3~' delete-word # Alt+Del  почему-то это блокирует
 
 # Resource files
 
-alias gl='git log --pretty=format:"%an, %ar, %h: %s"'
-alias gs='git status'
-alias gf='git fetch'
-alias ga='git add'
-alias gc='git commit -m'
-alias gca='git commit -a -m'
-alias gp='git pull --rebase && git push'
-alias gull='git pull --rebase'
-alias gpp='git pull --rebase git push'
-alias gush='git push'
-alias gm='git merge'
-alias gb='git branch'
-alias gco='git checkout'
-alias gd='git diff'
-alias gu='git ls-files --other --exclude-standard'
-alias gt='git log --graph --oneline --decorate --all'
 alias grep='egrep -s --colour=auto'
-alias t='tree -C -L 1'
 alias tree='tree -C'
 alias ls='ls -F -h'
 alias ll='ls -l'
-alias nano='nano -w'
+alias la='ls -a'
 alias cp='cp -viR'
 alias mv='mv -vi'
 alias rm='rm -viR'
 alias md='mkdir -p -v'
-alias jackD='set_rlimits jackd -Rv -p512 -d alsa -dhw:1 -r96000 -p4096 -n2 -Xseq'
 alias df='df -h'
 alias du='du -h'
 alias burndvd='growisofs -Z /dev/dvdrw -R -J'
@@ -132,7 +114,6 @@ alias burndvdISO='growisofs -dvd-compat -Z /dev/dvdrw='
 alias burncd='mkisofs -r -f -jcharset=cp1251 -C $(cdrecord dev=/dev/cdrw -msinfo) -M /dev/cdrw $HOME/forburn/ | cdrecord --speed=4 -v -multi driveropts=burnfree -eject dev=/dev/cdrw -'
 alias burncdISO='cdrecord --speed=4 -v -multi driveropts=burnfree -eject dev=/dev/cdrw'
 alias blankcd='cdrecord --dev=/dev/cdrw --blank=fast'
-alias bl='baudline_jack -waveform -realtime -record -jack -inconnect'
 alias wget='wget --no-check-certificate'
 alias wgetp='wgetpaste -rXvt'
 alias zip="zip -r"
@@ -341,3 +322,9 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
