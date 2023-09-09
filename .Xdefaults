@@ -1,0 +1,37 @@
+!! Appearance
+xft.antialias: true
+xft.rgba: rgb
+xft.hinting: true
+xft.hintstyle: hintslight
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+urxvt.depth: 32
+urxvt.loginShell: true
+urxvt.geometry: 125x40
+
+!! Font prefferenes
+urxvt.font: xft:Iosevka:pixelsize=16
+urxvt.boldFont: xft:Iosevka:pixelsize=16:weight=bold
+urxvt.letterSpace: -1
+
+!! Larger history limit
+urxvt.saveLines: 1000000
+
+!! Perl extensions
+urxvt.perl-ext-common: default,matcher,font-size,fullscreen
+urxvt.scrollStyle: rxvt
+urxvt.scrollBar: false
+urxvt.keysym.F11: perl:fullscreen:switch
+urxvt.cursorBlink: false
+urxvt.cursorColor: #657b83
+urxvt.cursorUnderline: false
+urxvt.pointerBlank: true
+urxvt.matcher.button: 1
+
+!! Open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+
+!! Change font size on Control-Plus/Minus
+urxvt.keysym.Control-0x2b: perl:font-size:increase
+urxvt.keysym.Control-0x2d: perl:font-size:decrease
+
